@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: "S-CoreDream-3Light";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --color_1: #728ffc;
+  --color_2: #beaeed;
+  --color_3: #ae98ee;
+  --colorWhite: #ffffff;
+  --gap: 16px;
+  --gap_2: 32px;
+  font-size: 16px;
+  color: var(--color_3);
+  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Single Day", cursive;
+}
+body {
+  background-color: #ddd;
+}
+.img {
+  width: 100%;
+  display: block;
+}
+.title {
+  padding: 1.25rem 0.5rem;
+  font-size: 2rem;
+  color: var(--colorWhite);
+  background-color: #fc9e72;
+  margin-bottom: var(--gap_2);
+}
+
+.hd {
+  max-width: 290px;
+  width: calc(100% - 1rem);
+  padding: 1rem;
+}
+.main {
+  max-width: 290px;
+  width: calc(100% - 1rem);
+  min-height: 500px;
+
+  background-color: var(--color_2);
+  background: linear-gradient(
+      180deg,
+      rgba(190, 174, 237, 0.5) 0%,
+      rgba(62, 0, 245, 0.015) 100%
+    ),
+    #beaeed;
+  padding: 1rem;
+}
+
+.main h2 {
+  font-size: 1.25rem;
+  color: var(--colorWhite);
+  padding-top: calc(var(--gap_2) * 2);
+  text-align: center;
+  font-family: "S-CoreDream-3Light";
+  font-weight: bold;
+  letter-spacing: -0.085em;
+  line-height: 1.1;
+  margin-bottom: var(--gap_2);
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>상품등록페이지</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&family=Roboto:wght@500&family=Single+Day&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 구글폰트 Noto Sans Korean -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&family=Roboto:wght@500&family=Single+Day&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/public/css/my_reset.css" />
+    <link rel="stylesheet" href="/public/css/common.css" />
+    <link rel="stylesheet" href="/public/css/detail.css" />
+  </head>
+  <nav class="hd">
+    <h1>갖고싶다!</h1>
+    <a href="/" class="hdImg"> </a>
+  </nav>
+  <body>
+    <main class="main">
+      <ul class="listCon">
+        <li class="list">
+          <p hidden><%= data._id %></p>
+          <div class="ProductUrl">
+            <img src="<%= data.Url %>" alt="이미지url" />
+          </div>
+          <div class="productName">
+            <p><span>상품명</span></p>
+            <div>
+              <p><%= data.name %></p>
+            </div>
+          </div>
+          <div class="ProductAmount">
+            <p><span>상품 금액</span></p>
+            <div>
+              <p><%= data.Amount %></p>
+            </div>
+          </div>
+          <div class="ProductExplanation">
+            <p><span>기타</span></p>
+            <div>
+              <p><%= data.Explanation %></p>
+            </div>
+          </div>
+        </li>
+        <p class="btn_wrap">
+          <a href="/edit/<%=data._id%>">수정</a>
+          <input
+            class="delete"
+            type="button"
+            value="삭제"
+            data-id="<%= data._id %>"
+          />
+        </p>
+      </ul>
+    </main>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+      integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(".delete").click(function (e) {
+        let num = e.target.dataset.id;
+        console.log(num);
+        $.ajax({
+          method: "DELETE",
+          url: "/delete",
+          data: { _id: num },
+        })
+          .done(function (result) {
+            location.href = "/";
+          })
+          .fail(function (err) {});
+      });
+    </script>
+  </body>
+</html>
