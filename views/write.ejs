@@ -18,69 +18,76 @@
     <link rel="stylesheet" href="/public/css/common.css" />
     <link rel="stylesheet" href="/public/css/write.css" />
   </head>
-  <nav class="hd">
-    <h1>갖고싶다!</h1>
-    <a href="/" class="hdImg"> </a>
-  </nav>
+  <%- include('header.ejs') %>
+
   <body>
-    <main class="main">
-      <ul class="listCon">
-        <form action="/add" method="post">
-          <li><input type="date" id="currentDate" /></li>
-          <li class="list">
-            <label for="productName" class="product productName">상품명</label>
-            <input
-              type="text"
-              name="productName"
-              id="productName"
-              class="ProductInput"
-            />
-          </li>
-          <li class="list">
-            <label for="ProductAmount" class="product ProductAmount"
-              >상품금액</label
-            >
-            <input
-              type="text"
-              name="ProductAmount"
-              id="ProductAmount"
-              class="ProductInput"
-            />
-          </li>
-          <li class="list">
-            <label for="ProductUrl" class="product ProductUrl"
-              >상품이미지 URL</label
-            >
-            <input
-              type="text"
-              name="ProductUrl"
-              id="ProductUrl"
-              class="ProductInput"
-            />
-          </li>
-          <li class="list">
-            <label for="ProductExplanation" class="product ProductExplanation"
-              ><span>기타</span></label
-            >
-            <textarea
-              class="ProductInput"
-              id="ProductExplanation"
-              name="ProductExplanation"
-            ></textarea>
-          </li>
+    <div class="wrap">
+      <nav class="hd">
+        <h1>갖고싶다!</h1>
+        <a href="/" class="hdImg"> </a>
+      </nav>
+      <main class="main">
+        <ul class="listCon">
+          <form action="/add" method="post">
+            <li hidden>
+              <input type="date" id="currentDate" name="currentDate" />
+            </li>
+            <li class="list">
+              <label for="productName" class="product productName"
+                >상품명</label
+              >
+              <input
+                type="text"
+                name="productName"
+                id="productName"
+                class="ProductInput"
+              />
+            </li>
+            <li class="list">
+              <label for="ProductAmount" class="product ProductAmount"
+                >상품금액</label
+              >
+              <input
+                type="text"
+                name="ProductAmount"
+                id="ProductAmount"
+                class="ProductInput"
+              />
+            </li>
+            <li class="list">
+              <label for="ProductUrl" class="product ProductUrl"
+                >상품이미지 URL</label
+              >
+              <input
+                type="text"
+                name="ProductUrl"
+                id="ProductUrl"
+                class="ProductInput"
+              />
+            </li>
+            <li class="list">
+              <label for="ProductExplanation" class="product ProductExplanation"
+                ><span>기타</span></label
+              >
+              <textarea
+                class="ProductInput"
+                id="ProductExplanation"
+                name="ProductExplanation"
+              ></textarea>
+            </li>
 
-          <a href="#none" class="goalsBtn">
-            <span>목표금액 설정하기</span>
-            <img src="/public/img/Arrow_Right.svg" alt="화살표" />
-          </a>
-          <p class="btn_wrap">
-            <input type="submit" value="저장" />
-            <a href="/">취소</a>
-          </p>
-        </form>
-      </ul>
-    </main>
-
+            <a href="#none" class="goalsBtn">
+              <span>목표금액 설정하기</span>
+              <img src="/public/img/Arrow_Right.svg" alt="화살표" />
+            </a>
+            <p class="btn_wrap">
+              <input type="submit" value="저장" />
+              <a href="/">취소</a>
+            </p>
+          </form>
+        </ul>
+      </main>
+    </div>
     <script>
       document.getElementById("currentDate").value = new Date()
         .toISOString()

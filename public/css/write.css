@@ -89,6 +89,7 @@
   width: 90%;
   color: #fff;
   transform: translate(2%, -2%);
+  overflow: hidden;
 }
 .ProductInput:focus {
   background-color: #728ffc80;

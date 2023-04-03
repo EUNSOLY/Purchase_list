@@ -57,14 +57,17 @@ async function main() {
 
     //POST
     app.post("/add", async function (req, res) {
-      console.log(req.body);
-      const { productName, ProductAmount, ProductUrl, ProductExplanation } =
-        req.body;
+      console.log(req.body.currentDate);
+      const {
+        productName,
+        ProductAmount,
+        ProductUrl,
+        ProductExplanation,
+        currentDate,
+      } = req.body;
       const { totalcounter } = await counterCollection.findOne({
         name: "counter",
       });
-
-      console.log(productName);
 
       await postCollection.insertOne({
         _id: totalcounter + 1,
@@ -72,6 +75,7 @@ async function main() {
         Amount: ProductAmount,
         Url: ProductUrl,
         Explanation: ProductExplanation,
+        currentDate: currentDate,
       });
       await counterCollection.updateOne(
         { name: "counter" },

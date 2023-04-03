@@ -95,6 +95,7 @@
 .ProductInput:focus {
   background-color: #728ffc80;
 }
+
 .ProductExplanation {
   width: 100%;
 }
@@ -109,6 +110,11 @@
   height: 120px;
   width: 95%;
   transform: translate(0.3%, 0);
+  overflow-y: scroll;
+}
+
+#ProductExplanation::-webkit-scrollbar {
+  display: none;
 }
 .goalsBtn {
   display: flex;

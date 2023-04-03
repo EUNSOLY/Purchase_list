@@ -20,12 +20,25 @@
   font-family: "Noto Sans KR", sans-serif;
   font-family: "Single Day", cursive;
 }
+
 body {
   background-color: #ddd;
 }
 .img {
   width: 100%;
   display: block;
+}
+.header {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  padding: 1.5rem 0 0;
+  text-shadow: 0px 0px 10px rgba(190, 174, 237, 0.8);
+}
+.wrap {
+  margin: 100px auto;
+  width: 40%;
 }
 .title {
   padding: 1.25rem 0.5rem;
@@ -44,7 +57,6 @@ body {
   max-width: 290px;
   width: calc(100% - 1rem);
   min-height: 500px;
-
   background-color: var(--color_2);
   background: linear-gradient(
       180deg,

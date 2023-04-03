@@ -21,34 +21,35 @@
     <link rel="stylesheet" href="/public/css/index.css" />
   </head>
   <body>
-    <main class="main">
-      <h2>
-        버릴 수 없는 <br />
-        구매욕구
-      </h2>
-
-      <div class="date">
-        <button class="btn prev"></button>
-        <span class="dateList"></span>
-        <button class="btn next"></button>
-      </div>
-      <ul class="listCon">
-        <li class="list">
-          <a href="/write"
-            ><img src="/public/img/Plus.svg" alt="plus" />
-            <span>추가하기</span></a
-          >
-        </li>
-
-        <% for(let i = 0 ; i < post.length; i++){%>
-        <li class="list list2" data-dayinfo="<%=  %>">
-          <a href="/detail/<%=post[i]._id%>"></a>
-
-          <span><%= post[i].name%></span>
-          <img src="/public/img/crystal.svg" alt="crystal" />
-        </li>
-        <% } %>
-      </ul>
-    </main>
+    <%- include('header.ejs') %>
+    <hr />
+    <div class="wrap">
+      <main class="main">
+        <h2>
+          버릴 수 없는 <br />
+          구매욕구
+        </h2>
+        <div class="date">
+          <button class="btn prev"></button>
+          <span class="dateList"></span>
+          <button class="btn next"></button>
+        </div>
+        <ul class="listCon">
+          <li class="list plusList on">
+            <a href="/write"
+              ><img src="/public/img/Plus.svg" alt="plus" />
+              <span>추가하기</span></a
+            >
+          </li>
+          <% for(let i = 0 ; i < post.length; i++){%>
+          <li class="list list2 on" data-dayinfo="<%= post[i].currentDate %>">
+            <a href="/detail/<%=post[i]._id%>"></a>
+            <span><%= post[i].name%></span>
+            <img src="/public/img/crystal.svg" alt="crystal" />
+          </li>
+          <% } %>
+        </ul>
+      </main>
+    </div>
   </body>
 </html>

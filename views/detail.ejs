@@ -18,48 +18,53 @@
     <link rel="stylesheet" href="/public/css/common.css" />
     <link rel="stylesheet" href="/public/css/detail.css" />
   </head>
-  <nav class="hd">
-    <h1>갖고싶다!</h1>
-    <a href="/" class="hdImg"> </a>
-  </nav>
+
   <body>
-    <main class="main">
-      <ul class="listCon">
-        <li class="list">
-          <p hidden><%= data._id %></p>
-          <div class="ProductUrl">
-            <img src="<%= data.Url %>" alt="이미지url" />
-          </div>
-          <div class="productName">
-            <p><span>상품명</span></p>
-            <div>
-              <p><%= data.name %></p>
+    <%- include('header.ejs') %>
+    <hr />
+    <div class="wrap">
+      <nav class="hd">
+        <h1>갖고싶다!</h1>
+        <a href="/" class="hdImg"> </a>
+      </nav>
+      <main class="main">
+        <ul class="listCon">
+          <li class="list">
+            <p hidden><%= data._id %></p>
+            <div class="ProductUrl">
+              <img src="<%= data.Url %>" alt="이미지url" />
             </div>
-          </div>
-          <div class="ProductAmount">
-            <p><span>상품 금액</span></p>
-            <div>
-              <p><%= data.Amount %></p>
+            <div class="productName">
+              <p><span>상품명</span></p>
+              <div>
+                <p><%= data.name %></p>
+              </div>
             </div>
-          </div>
-          <div class="ProductExplanation">
-            <p><span>기타</span></p>
-            <div>
-              <p><%= data.Explanation %></p>
+            <div class="ProductAmount">
+              <p><span>상품 금액</span></p>
+              <div>
+                <p><%= data.Amount %></p>
+              </div>
             </div>
-          </div>
-        </li>
-        <p class="btn_wrap">
-          <a href="/edit/<%=data._id%>">수정</a>
-          <input
-            class="delete"
-            type="button"
-            value="삭제"
-            data-id="<%= data._id %>"
-          />
-        </p>
-      </ul>
-    </main>
+            <div class="ProductExplanation">
+              <p><span>기타</span></p>
+              <div>
+                <p><%= data.Explanation %></p>
+              </div>
+            </div>
+          </li>
+          <p class="btn_wrap">
+            <a href="/edit/<%=data._id%>">수정</a>
+            <input
+              class="delete"
+              type="button"
+              value="삭제"
+              data-id="<%= data._id %>"
+            />
+          </p>
+        </ul>
+      </main>
+    </div>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"

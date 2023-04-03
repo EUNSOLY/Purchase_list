@@ -18,75 +18,81 @@
     <link rel="stylesheet" href="/public/css/common.css" />
     <link rel="stylesheet" href="/public/css/edit.css" />
   </head>
-  <nav class="hd">
-    <h1>갖고싶다!</h1>
-    <a href="/" class="hdImg"> </a>
-  </nav>
-  <body>
-    <main class="main">
-      <ul class="listCon">
-        <form action="/edit?_method=PUT" method="post">
-          <input hidden type="text" name="id" value="<%= post._id %>" />
-          <p hidden><%= post._id %></p>
-          <li class="list">
-            <label for="productName" class="product productName">상품명</label>
-            <input
-              type="text"
-              name="productName"
-              id="productName"
-              class="ProductInput"
-              value="<%= post.name %>"
-            />
-          </li>
-          <li class="list">
-            <label for="ProductAmount" class="product ProductAmount"
-              >상품금액</label
-            >
-            <input
-              type="text"
-              name="ProductAmount"
-              id="ProductAmount"
-              class="ProductInput"
-              value="<%= post.Amount %>"
-            />
-          </li>
-          <li class="list">
-            <label for="ProductUrl" class="product ProductUrl">
-              <span>상품이미지 URL</span></label
-            >
-            <input
-              type="text"
-              name="ProductUrl"
-              id="ProductUrl"
-              class="ProductInput"
-              value="<%= post.Url %>"
-            />
-          </li>
-          <li class="list">
-            <label for="ProductExplanation" class="product ProductExplanation"
-              ><span>기타</span></label
-            >
-            <textarea
-              class="ProductInput"
-              name="ProductExplanation"
-              id="ProductExplanation"
-              cols="30"
-              rows="10"
-            >
-            <%= post.Explanation %></textarea
-            >
-          </li>
 
-          <a href="#none" class="goalsBtn">
-            <span>목표금액 수정하기</span>
-            <img src="/public/img/Arrow_Right.svg" alt="화살표" />
-          </a>
-          <p class="btn_wrap">
-            <input type="submit" value="저장" />
-            <a href="/detail/<%= post._id %>">취소</a>
-          </p>
-        </form>
-      </ul>
-    </main>
+  <body>
+    <%- include('header.ejs') %>
+    <hr />
+    <div class="wrap">
+      <nav class="hd">
+        <h1>갖고싶다!</h1>
+        <a href="/" class="hdImg"> </a>
+      </nav>
+      <main class="main">
+        <ul class="listCon">
+          <form action="/edit?_method=PUT" method="post">
+            <input hidden type="text" name="id" value="<%= post._id %>" />
+            <p hidden><%= post._id %></p>
+            <li class="list">
+              <label for="productName" class="product productName"
+                >상품명</label
+              >
+              <input
+                type="text"
+                name="productName"
+                id="productName"
+                class="ProductInput"
+                value="<%= post.name %>"
+              />
+            </li>
+            <li class="list">
+              <label for="ProductAmount" class="product ProductAmount"
+                >상품금액</label
+              >
+              <input
+                type="text"
+                name="ProductAmount"
+                id="ProductAmount"
+                class="ProductInput"
+                value="<%= post.Amount %>"
+              />
+            </li>
+            <li class="list">
+              <label for="ProductUrl" class="product ProductUrl">
+                <span>상품이미지 URL</span></label
+              >
+              <input
+                type="text"
+                name="ProductUrl"
+                id="ProductUrl"
+                class="ProductInput"
+                value="<%= post.Url %>"
+              />
+            </li>
+            <li class="list">
+              <label for="ProductExplanation" class="product ProductExplanation"
+                ><span>기타</span></label
+              >
+              <textarea
+                class="ProductInput"
+                name="ProductExplanation"
+                id="ProductExplanation"
+                cols="30"
+                rows="10"
+              >
+              <%= post.Explanation %></textarea
+              >
+            </li>
+            <a href="#none" class="goalsBtn">
+              <span>목표금액 수정하기</span>
+              <img src="/public/img/Arrow_Right.svg" alt="화살표" />
+            </a>
+            <p class="btn_wrap">
+              <input type="submit" value="저장" />
+              <a href="/detail/<%= post._id %>">취소</a>
+            </p>
+          </form>
+        </ul>
+      </main>
+    </div>
   </body>
 </html>

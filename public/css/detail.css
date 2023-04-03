@@ -26,6 +26,7 @@
   border: 0.5px solid var(--color_2);
   border-radius: 3px;
 }
+
 .list {
   padding: 0.5rem 1rem;
 }
@@ -94,6 +95,9 @@
   top: 8%;
   transform: translate(-50%, 0);
   overflow-y: scroll;
+}
+.ProductExplanation > div > p::-webkit-scrollbar {
+  display: none;
 }
 .listCon .btn_wrap {
   width: 100%;

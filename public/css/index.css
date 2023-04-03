@@ -42,7 +42,6 @@
   height: 300px;
   overflow-x: hidden;
   overflow-y: scroll;
-  -ms-overflow-style: none;
 }
 .listCon::-webkit-scrollbar {
   display: none;
@@ -54,9 +53,11 @@
   overflow: hidden;
   margin-bottom: 0.5rem;
 }
+
 .list a {
   display: block;
   padding: 0.5rem 0.25rem;
+  width: 100%;
 }
 .list2 {
   display: flex;
@@ -71,5 +72,15 @@
   top: 0;
   left: 0;
 }
-.list2 > span {
+.list2 {
+  display: none;
+}
+.list2.on {
+  display: flex;
+}
+.plusList {
+  display: none;
+}
+.plusList.on {
+  display: flex;
 }
