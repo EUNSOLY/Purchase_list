@@ -1,6 +1,10 @@
 # node.js+express CRUD
 
-## [데모](http://todos-env.eba-z26detdu.ap-northeast-2.elasticbeanstalk.com/)
+## 🔗 [데모](http://todos-env.eba-z26detdu.ap-northeast-2.elasticbeanstalk.com/)
+
+## 시연
+
+<img src="https://raw.githubusercontent.com/EUNSOLY/Purchase_list/a53c0e56d15cec52132236b5bd172904dbddc6b9/public/readmeImg/chrome_NgknJPF8KU.gif"/>
 
 <br/>
 
@@ -58,3 +62,10 @@
 1. 좋아요 버튼 처럼 클릭하면 하트의 갯수가 올라가서 응원하는 마음을 남길 수 있는 기능
 
 ### 🖐 와이어프레임 / 시안
+
+🔗 [와이어프레임 및 디자인](https://www.figma.com/file/XqoPGijg4CInZim1IuApH6/%EC%9D%B4%EC%9D%80%EC%86%94_TODOList?node-id=0%3A1&t=4y2QtxkjvaNypeGu-1)
+
+<p>📌와이어프레임</p>
+ <img src="https://raw.githubusercontent.com/EUNSOLY/Purchase_list/a53c0e56d15cec52132236b5bd172904dbddc6b9/public/readmeImg/wireFram.PNG" />
+ <p>📌디자인 시안</p>
+<img src="https://raw.githubusercontent.com/EUNSOLY/Purchase_list/a53c0e56d15cec52132236b5bd172904dbddc6b9/public/readmeImg/Design.PNG" />
