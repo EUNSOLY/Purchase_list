@@ -1,10 +1,16 @@
 # node.js+express CRUD
 
-## 🔗 [데모](http://todos-env.eba-z26detdu.ap-northeast-2.elasticbeanstalk.com/)
+## 🔗[데모](http://todos-env.eba-z26detdu.ap-northeast-2.elasticbeanstalk.com/)
 
 ## 시연
 
 <img src="https://raw.githubusercontent.com/EUNSOLY/Purchase_list/a53c0e56d15cec52132236b5bd172904dbddc6b9/public/readmeImg/chrome_NgknJPF8KU.gif"/>
+
+<br/>
+
+### 🖐 개발 기간
+
+<p>📌2023.03.27일 ~ 2023.04.03일</p>
 
 <br/>
 
