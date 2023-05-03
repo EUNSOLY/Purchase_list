@@ -1,6 +1,6 @@
 # node.js+express CRUD
 
-## 🔗[데모](http://todos-env.eba-z26detdu.ap-northeast-2.elasticbeanstalk.com/)
+## 🔗[데모](https://port-0-purchase-list-d3jc2alg1jel3d.sel3.cloudtype.app/)
 
 ## 시연
 
